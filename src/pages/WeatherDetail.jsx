@@ -13,7 +13,7 @@ const WeatherDetail = () => {
 
   https: return (
     <Layout>
-      <div className="bg-sunset w-[100%] bg-no-repeat bg-cover bg-center p-10 min-h-screen flex flex-col">
+      <div className="detail w-full p-10 min-h-screen flex flex-col">
         <h1 className="text-white font-bold text-4xl cursor-pointer -mt-4 mb-4 flex gap-x-6 items-center">
           <FaArrowAltCircleLeft
             size="30px"

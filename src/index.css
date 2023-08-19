@@ -30,3 +30,19 @@
 .logoT {
   text-shadow: 2px 4px 4px rgba(46, 91, 173, 0.6);
 }
+
+.home {
+  background-image: url("../src/assets/images/cloud1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+}
+
+.detail {
+  background-image: url("../src/assets/images/sunset.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+}

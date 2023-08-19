@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg-hero w-[100%] bg-no-repeat bg-cover bg-center min-h-screen p-8 flex flex-col gap-10">
+      <div className="home w-full min-h-screen p-8 flex flex-col gap-10">
         <h1 className="text-sky-300 font-extrabold text-4xl logoT">
           Weatherio
         </h1>
