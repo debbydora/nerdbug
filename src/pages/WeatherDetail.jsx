@@ -11,7 +11,7 @@ const WeatherDetail = () => {
   const { notes, handleNotesChange, saveNotes, deleteNotes, saving, deleting } =
     useWeather();
 
-  return (
+  https: return (
     <Layout>
       <div className="bg-sunset w-[100%] bg-no-repeat bg-cover bg-center p-10 min-h-screen flex flex-col">
         <h1 className="text-white font-bold text-4xl cursor-pointer -mt-4 mb-4 flex gap-x-6 items-center">

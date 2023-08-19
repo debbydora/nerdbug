@@ -1,5 +1,5 @@
 export const API_KEY = "94e0991da9a47f42d3510736de6f0827";
-export const BASE_URL = "http://api.openweathermap.org/data/2.5";
+export const BASE_URL = "https://api.openweathermap.org/data/2.5";
 export const INITIAL_CITIES = [
   "Tokyo",
   "Delhi",
