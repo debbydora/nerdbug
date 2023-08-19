@@ -15,6 +15,7 @@ const Home = () => {
     fetchCity,
     handleLocationClick,
     searchedCity,
+    locate,
   } = useWeather();
 
   return (
@@ -23,7 +24,7 @@ const Home = () => {
         <h1 className="text-sky-300 font-extrabold text-4xl logoT">
           Weatherio
         </h1>
-        <div className="flex md:flex-row flex-col gap-y-2 justify-between gap-x-20 items-center">
+        <div className="flex md:flex-row gap-x-20 flex-col gap-y-2 justify-between items-center">
           <Search
             searchTerm={searchTerm}
             handleSearchChange={handleSearchChange}
@@ -37,7 +38,7 @@ const Home = () => {
               <MdMyLocation />
             </button>
             <p className="whitespace-nowrap text-sm font-extrabold">
-              Current Location
+              {locate ? "Locating..." : "Current Location"}
             </p>
           </div>
         </div>
@@ -47,7 +48,7 @@ const Home = () => {
             <p className="text-2xl text-[#282727] font-extrabold -mb-6">
               Favourite cities
             </p>
-            <div className="flex justify-between flex-wrap gap-8 ">
+            <div className="grid justify-between flex-wrap gap-8 ">
               {sortedFavorites.map((cityWeather, index) => (
                 <CurrentWeatherCard
                   key={index}

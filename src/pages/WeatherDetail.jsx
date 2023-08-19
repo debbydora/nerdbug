@@ -11,16 +11,16 @@ const WeatherDetail = () => {
   const { notes, handleNotesChange, saveNotes, deleteNotes, saving, deleting } =
     useWeather();
 
-  https: return (
+  return (
     <Layout>
-      <div className="detail w-full p-10 min-h-screen flex flex-col">
+      <div className="detail w-full p-10 min-h-screen flex flex-col justify-center">
         <h1 className="text-white font-bold text-4xl cursor-pointer -mt-4 mb-4 flex gap-x-6 items-center">
           <FaArrowAltCircleLeft
             size="30px"
             color="#fff"
             onClick={() => navigate("/")}
           />
-          {state.city}
+          {state?.city ? state.city : state.state}
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-6">
           <aside className=" bg-black bg-opacity-50 col-span-1 lg:col-span-2 md:bg-cloud md:bg-bottom lg:bg-cloud bg-no-repeat bg-bottom bg-contain md:rounded-l-3xl">

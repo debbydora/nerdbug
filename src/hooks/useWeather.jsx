@@ -12,6 +12,7 @@ const useWeather = () => {
   const [notes, setNotes] = useState("");
   const [saving, setSaving] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [locate, setLocate] = useState(false);
   const navigate = useNavigate();
 
   const handleSearchChange = (event) => {
@@ -43,15 +44,18 @@ const useWeather = () => {
 
   const determineCityFromCoordinates = async (latitude, longitude) => {
     try {
+      setLocate(true);
       const response = await fetch(
-        `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${API_KEY}`
+        `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=10&appid=${API_KEY}`
       );
+      setLocate(false);
       const data = await response.json();
-      const city = data[0].state.split(" ")[0];
+      const city = data[0]?.state?.split(" ")[0];
       if (city) {
-        navigate(`/city-details/${city}`);
+        navigate(`/city-details/${city}`, { state: data[0] });
       }
     } catch (error) {
+      setLocate(false);
       console.error(error);
     }
   };
@@ -176,14 +180,13 @@ const useWeather = () => {
     weatherData,
     handleLocationClick,
     searchedCity,
-    ////
-
     notes,
     handleNotesChange,
     saveNotes,
     deleteNotes,
     saving,
     deleting,
+    locate,
   };
 };
 

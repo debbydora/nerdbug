@@ -1,4 +1,3 @@
-// eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
   return (
     <div className="h-screen overflow-x-hidden">

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { MdFavorite } from "react-icons/md";
 
 const CurrentWeatherCard = ({
@@ -15,7 +15,6 @@ const CurrentWeatherCard = ({
       <div className="bg-sky-300 shadow-lg shadow-[#9cbcdf] flex flex-col gap-4 p-6 text-white transition-all duration-200 ease-in-out transform hover:scale-[.98] hover:shadow-xl  cursor-pointer  md:w-[250px] w-full rounded-lg">
         <p className="font-extrabold text-2xl flex justify-between items-center">
           {name}
-          {/* <Link to={`/city-details/${data.city}`}> */}
           <button
             className="font-bold underline text-sm text-[#1b3474]"
             onClick={() =>
@@ -24,7 +23,6 @@ const CurrentWeatherCard = ({
           >
             view
           </button>
-          {/* </Link> */}
         </p>
 
         <p className="-mt-3 font-bold">{temperature} &#8451;</p>
@@ -33,7 +31,7 @@ const CurrentWeatherCard = ({
             onClick={handleClick}
             className="bg-white text-[#1b3474] font-bold rounded-md p-2 text-sm"
           >
-            Delete
+            Remove
           </button>
           <div className="text-black">
             <MdFavorite

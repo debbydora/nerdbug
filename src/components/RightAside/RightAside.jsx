@@ -7,7 +7,7 @@ const RightAside = ({
   saving,
   deleting,
 }) => {
-  const cityName = data.city;
+  const cityName = data?.city;
   const Notes = localStorage.getItem(`notes_${cityName}`);
   return (
     <>
