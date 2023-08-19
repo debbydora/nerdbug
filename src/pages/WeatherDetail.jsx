@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import RightAside from "../components/RightAside/RightAside";
-import LeftAside from "../components/leftAside/LeftAside";
+import LeftAside from "../components/LeftAside/LeftAside";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import useWeather from "../hooks/useWeather";
 
