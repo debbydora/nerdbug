@@ -9,6 +9,11 @@ const CurrentWeatherCard = ({
   toggleFavorite,
   favorities,
 }) => {
+  const handleNavigate = () => {
+    localStorage.setItem("myData", JSON.stringify(data));
+
+    navigate(`/city-details/${data?.city}`);
+  };
   const navigate = useNavigate();
   return (
     <>
@@ -17,8 +22,9 @@ const CurrentWeatherCard = ({
           {name}
           <button
             className="font-bold underline text-sm text-[#1b3474]"
-            onClick={() =>
-              navigate(`/city-details/${data?.city}`, { state: data })
+            onClick={
+              handleNavigate
+              // navigate(`/city-details/${data?.city}`, { state: data })
             }
           >
             view

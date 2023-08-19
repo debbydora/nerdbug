@@ -4,10 +4,24 @@ import RightAside from "../components/RightAside/RightAside";
 import LeftAside from "../components/LeftAside/LeftAside";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import useWeather from "../hooks/useWeather";
+import { useState, useEffect } from "react";
 
 const WeatherDetail = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    if (state) {
+      setData(state);
+    } else {
+      const storedData = localStorage.getItem("myData");
+      if (storedData) {
+        setData(JSON.parse(storedData));
+      }
+    }
+  }, [state]);
+
   const { notes, handleNotesChange, saveNotes, deleteNotes, saving, deleting } =
     useWeather();
 
@@ -20,15 +34,15 @@ const WeatherDetail = () => {
             color="#fff"
             onClick={() => navigate("/")}
           />
-          {state?.city ? state.city : state.state}
+          {data?.city ? data.city : data?.state}
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-6">
           <aside className=" bg-black bg-opacity-50 col-span-1 lg:col-span-2 md:bg-cloud md:bg-bottom lg:bg-cloud bg-no-repeat bg-bottom bg-contain md:rounded-l-3xl">
-            <LeftAside data={state} />
+            <LeftAside data={data} />
           </aside>
           <aside className="col-span-1 bg-black bg-opacity-70 lg:col-span-4  md:rounded-r-3xl">
             <RightAside
-              data={state}
+              data={data}
               notes={notes}
               handleNotesChange={handleNotesChange}
               saveNotes={saveNotes}

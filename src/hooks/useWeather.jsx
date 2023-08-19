@@ -19,10 +19,10 @@ const useWeather = () => {
     setSearchTerm(event.target.value);
   };
 
-  const availableCities = localStorage.getItem("Cities");
+  const availableCities = JSON.parse(localStorage.getItem("Cities") || null);
 
   useEffect(() => {
-    if (availableCities.length > 3) {
+    if (availableCities && availableCities.length > 0) {
       return;
     }
     fetchData();
@@ -146,7 +146,7 @@ const useWeather = () => {
       setSaving(false);
       localStorage.setItem(`notes_${cityName}`, notes);
       setNotes("");
-    }, 3000);
+    }, 2000);
   };
 
   const deleteNotes = (cityName) => {
@@ -155,7 +155,7 @@ const useWeather = () => {
       setDeleting(false);
       localStorage.removeItem(`notes_${cityName}`);
       setNotes("");
-    }, 3000);
+    }, 2000);
   };
 
   const sortedFavorites = [...favorities].sort((a, b) =>

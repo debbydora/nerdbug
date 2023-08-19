@@ -48,7 +48,7 @@ const Home = () => {
             <p className="text-2xl text-[#282727] font-extrabold -mb-6">
               Favourite cities
             </p>
-            <div className="grid justify-between flex-wrap gap-8 ">
+            <div className="flex justify-between flex-wrap gap-8 ">
               {sortedFavorites.map((cityWeather, index) => (
                 <CurrentWeatherCard
                   key={index}
