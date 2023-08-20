@@ -21,6 +21,7 @@ const CurrentWeatherCard = ({
         <p className="font-extrabold text-2xl flex justify-between items-center">
           {name}
           <button
+            data-testid="view"
             className="font-bold underline text-sm text-[#1b3474]"
             onClick={
               handleNavigate

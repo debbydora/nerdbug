@@ -17,7 +17,10 @@ const LeftAside = ({ data }) => {
           )}
 
           <p className="">
-            <span className="font-extrabold text-white text-4xl">
+            <span
+              data-testid="temp"
+              className="font-extrabold text-white text-4xl"
+            >
               {data?.temperature
                 ? `${data.temperature}°C`
                 : `Latitude: ${Math.round(data?.lat * 100) / 100}`}

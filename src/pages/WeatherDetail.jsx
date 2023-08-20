@@ -27,7 +27,10 @@ const WeatherDetail = () => {
 
   return (
     <Layout>
-      <div className="detail w-full p-10 min-h-screen flex flex-col justify-center">
+      <div
+        className="detail w-full p-10 min-h-screen flex flex-col justify-center"
+        data-testid="details"
+      >
         <h1 className="text-white font-bold text-4xl cursor-pointer -mt-4 mb-4 flex gap-x-6 items-center">
           <FaArrowAltCircleLeft
             size="30px"

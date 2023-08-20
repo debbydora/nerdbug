@@ -6,8 +6,11 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/city-details/:cityName" element={<WeatherDetail />} />
+        <Route path="/" element={<Home data-testid="home" />} />
+        <Route
+          path="/city-details/:cityName"
+          element={<WeatherDetail data-testid="details" />}
+        />
       </Routes>
     </>
   );

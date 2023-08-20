@@ -18,6 +18,7 @@ const RightAside = ({
           onChange={handleNotesChange}
           className="bg-white rounded-lg outline-none text-black p-4"
           rows={6}
+          data-testid="weather-detail-textarea"
         />
         <div className="flex justify-end gap-x-8">
           <button
