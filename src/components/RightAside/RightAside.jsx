@@ -22,14 +22,14 @@ const RightAside = ({
         />
         <div className="flex justify-end gap-x-8">
           <button
-            className="bg-[#2B41B4] p-2.5 rounded-lg transition-all duration-[200ms] ease-in-out transform hover:scale-[.98]"
+            className="bg-purple-500 p-2.5 rounded-lg transition-all duration-[200ms] ease-in-out transform hover:scale-[.98]"
             onClick={() => saveNotes(cityName)}
           >
             {saving ? "Saving ..." : "Save Note"}
           </button>
           <button
             onClick={() => deleteNotes(cityName)}
-            className="bg-[#2B41B4] p-2.5 rounded-lg hover:shadow-lg transition-all duration-[200ms] ease-in-out transform hover:scale-[.98]"
+            className="bg-purple-500 p-2.5 rounded-lg hover:shadow-lg transition-all duration-[200ms] ease-in-out transform hover:scale-[.98]"
           >
             {deleting ? "Deleting ..." : "Delete Note"}
           </button>

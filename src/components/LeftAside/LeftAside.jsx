@@ -32,10 +32,10 @@ const LeftAside = ({ data }) => {
               : `Longitude: ${Math.round(data?.lon * 100) / 100}`}
           </p>
           <div className="flex justify-center items-center">
-            <p className="text-gray-400 font-bold text-2xl mt-12">
+            <p className="text-gray-500 font-bold text-2xl mt-12">
               <MdOutlineLocationOn />
             </p>
-            <p className="text-gray-400 font-bold text-2xl mt-12">
+            <p className="text-gray-500 font-bold text-2xl mt-12">
               {data?.city ? data?.city : data?.name}
             </p>
           </div>

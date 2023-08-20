@@ -28,7 +28,7 @@ const WeatherDetail = () => {
   return (
     <Layout>
       <div
-        className="detail w-full p-10 min-h-screen flex flex-col justify-center"
+        className="bg-gradient-to-r from-sky-400 via-sky-200 to-purple-400 w-full p-10 min-h-screen flex flex-col justify-center"
         data-testid="details"
       >
         <h1 className="text-white font-bold text-4xl cursor-pointer -mt-4 mb-4 flex gap-x-6 items-center">
@@ -40,10 +40,10 @@ const WeatherDetail = () => {
           {data?.city ? data.city : data?.state}
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-6">
-          <aside className=" bg-black bg-opacity-50 col-span-1 lg:col-span-2 md:bg-cloud md:bg-bottom lg:bg-cloud bg-no-repeat bg-bottom bg-contain md:rounded-l-3xl">
+          <aside className=" bg-black bg-opacity-20 col-span-1 lg:col-span-2 md:bg-cloud md:bg-bottom lg:bg-cloud bg-no-repeat bg-bottom bg-contain md:rounded-l-3xl">
             <LeftAside data={data} />
           </aside>
-          <aside className="col-span-1 bg-black bg-opacity-70 lg:col-span-4  md:rounded-r-3xl">
+          <aside className="col-span-1 bg-black bg-opacity-30 lg:col-span-4  md:rounded-r-3xl">
             <RightAside
               data={data}
               notes={notes}
